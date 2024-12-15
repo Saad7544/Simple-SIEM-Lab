@@ -92,19 +92,23 @@
 
        - Let's create a few security-related events on your Kali virtual machine to make sure the agent is operating correctly. We'll make use of a potent tool called Nmap for this. Network Mapper, or Nmap for short, is a priceless open-source tool that is well-known for network administration, security audits, and exploration. It is designed to efficiently map out a computer network's infrastructure by exposing hosts and services. Nmap is excellent at determining operating systems and software versions, searching hosts for open ports, and obtaining thorough network knowledge. Follow these simple steps to conduct an Nmap scan:
 
-       - <b>(Optional) Install Nmap:</b> If you're not using Kali Linux (where Nmap comes preinstalled), you'll need to install it on your Linux VM. Open a new Terminal and execute the following command to install Nmap: <b>sudo apt install nmap</b>
+       - <b>(Optional) Install Nmap:</b> If you're not using Kali Linux (where Nmap comes preinstalled), you'll need to install it on your Linux VM. Open a new Terminal and execute the following command to install Nmap:
+
+             sudo apt install nmap
       <br/>
-       - <b>Run the Scan:</b> With Nmap installed, initiate a scan on your Kali machine. Execute this command in the Terminal: <b>nmap -sC -sV -p- localhost</b>
+         <b>Run the Scan:</b> With Nmap installed, initiate a scan on your Kali machine. Execute this command in the Terminal:<br/><br/>
+
+             nmap -sC -sV -p- localhost
       
       <br/>
        <img src="Images/NmapScan.png" height="150%" width="100%" alt="Nmap Scan"/><br><br/>
 
-   - Run a few more Nmap scans (“nmap -sS ”, “nmap -sT ”, “nmap -p- ” etc. :
+     Run a few more Nmap scans (“nmap -sS ”, “nmap -sT ”, “nmap -p- ” etc. :
 
    <img src="Images/MoreNmapScans.png" height="150%" width="100%" alt="More Scans"/><br><br/>
 <br/>
 
-3. <b>Searching the Elastic SIEM for Security Events:</b> It's time to start searching and examining the logs in the SIEM interface now that the data has been smoothly transferred from the Kali virtual machine to our SIEM. To help you get started, here is a basic guide:
+4. <b>Searching the Elastic SIEM for Security Events:</b> It's time to start searching and examining the logs in the SIEM interface now that the data has been smoothly transferred from the Kali virtual machine to our SIEM. To help you get started, here is a basic guide:
      - To access your Elastic Deployment, navigate to it, find the menu icon (usually shown by three horizontal lines) in the top-left corner, click on it, and then choose the "Logs" option under the "Observability" section. This will allow you to view the logs coming from your Kali virtual machine.<br/><br/>
 
 <p align="center">
