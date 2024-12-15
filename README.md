@@ -112,7 +112,8 @@
 <br/>
 
 4. <b>Searching the Elastic SIEM for Security Events:</b> It's time to start searching and examining the logs in the SIEM interface now that the data has been smoothly transferred from the Kali virtual machine to our SIEM. To help you get started, here is a basic guide:
-     - To access your Elastic Deployment, navigate to it, find the menu icon (usually shown by three horizontal lines) in the top-left corner, click on it, and then choose the "Logs" option under the "Observability" section. This will allow you to view the logs coming from your Kali virtual machine.<br/><br/>
+    
+    - To access your Elastic Deployment, navigate to it, find the menu icon (usually shown by three horizontal lines) in the top-left corner, click on it, and then choose the "Logs" option under the "Observability" section. This will allow you to view the logs coming from your Kali virtual machine.<br/><br/>
 
 <p align="center">
       <img src="Images/LogsButton.png" height="50%" width="25%" alt="Adding Integrations"/>
