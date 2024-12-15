@@ -41,7 +41,7 @@
 
       - <b>Free Elastic account setup and creating Deployment: </b>
 
-        <img src="Images/FreeAccountCreated" height="150%" width="100%" alt="Account Created"/>
+        <img src="Images/FreeAccountCreated.png" height="150%" width="100%" alt="Account Created"/>
             
 
       - <b>Kali VM installed: </b>
