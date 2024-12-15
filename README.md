@@ -41,14 +41,14 @@
 
       - <b>Free Elastic account setup and creating Deployment: </b>
 
-            <img src="https://github.com/Saad7544/Simple-SIEM-Lab/blob/main/FreeAccountCreated" height="150%" width="100%" alt="Account Created"/>
+        <img src="https://github.com/Saad7544/Simple-SIEM-Lab/blob/main/Images/FreeAccountCreated" height="150%" width="100%" alt="Account Created"/>
             
 
       - <b>Kali VM installed: </b>
             Go to the links provided above, download and install Oracle Virtual Box, then download Kali Linux VM and save it in a folder on the computer. Virtual box will be used to setup and run a virtual machine and Kali Linux VM will be installed on the virtual machine.
             Once the installation is completed, log in to the Kali VM using the credentials <b>“kali”</b> for both the username and password.
 
-            <img src="Images/VirtualBox_Kali Linux.png" height="150%" width="100%" alt="Kali VM"/>
+        <img src="Images/VirtualBox_Kali Linux.png" height="150%" width="100%" alt="Kali VM"/>
             <br />
             <br />
       
