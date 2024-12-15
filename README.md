@@ -152,7 +152,45 @@ Follow these steps to craft your dashboard:
   <img src="Images/Dashboard.png" height="150%" width="100%" alt="Dashboard"/><br><br/>
 
 
+5. <b>Create an Alert:</b> In a SIEM environment, alerts play a pivotal role in identifying security incidents and promptly responding to them. By establishing alerts based on predefined rules or custom queries, you can effectively monitor your system for suspicious activities and take appropriate action when necessary. In this task, we'll guide you through the process of creating an alert within your Elastic SIEM instance to detect Nmap scans. Following these steps will enable you to set up an alert that actively monitors your logs for Nmap scan events and notifies you upon detection.
 
+    - <b>Access the Alerts Section:</b> Begin by clicking on the menu icon located at the top-left corner of the interface. From the dropdown menu, navigate to the "Security" section and select "Alerts."<br/><br/>
+
+    <p align="center">
+          <img src="Images/AlertButton.png" height="50%" width="25%" alt="Alert Button"/>
+          </p><br/>
+
+    - <b>Manage Rules:</b> Within the Alerts interface, locate and click on the “Manage rules” button positioned at the top right corner. This action grants you access to the rules management area where you can create and configure alerts to suit your specific requirements.<br/><br/>
+      - <b>Create a New Rule:</b> After accessing the rules management area, proceed by clicking on the “Create new rule” button located at the top right corner of the interface.
+      - <b>Define Rule:</b> Within the "Define rule" section, choose the “Custom query” option from the dropdown menu. This selection allows you to create a rule based on a custom query tailored to your specific criteria.
+      - <b>Set Conditions:</b> Under the “Custom query” section, establish the conditions for the rule by specifying the query parameters. You can utilize the following query to detect Nmap scan events.<br/><br/>
+
+      <img src="Images/ManageRules.png" height="150%" width="100%" alt="Manage Rules"/><br><br/>
+
+      <img src="Images/CreateNewRule.png" height="150%" width="100%" alt="Create Rules"/><br><br/>
+
+      <img src="Images/CustomQuery.png" height="150%" width="100%" alt="Custom Rules"/><br><br/>
+
+      <img src="Images/QueryCustom.png" height="150%" width="100%" alt="Continuing"/><br><br/>
+
+      - This query will match all events with the action “nmap_scan.” Then click “Continue.”
+      - Under the “About rule” section, give your rule a name and a description (Nmap Scan Detection).
+      - Set the severity level for the alert, which can help you prioritize alerts based on their importance. Keep all the other default settings under “Schedule rule” and click “Continue”<br/><br/>
+    
+      <img src="Images/AboutRule.png" height="150%" width="100%" alt="About Rule"/><br><br/>
+
+      - <b>Choose Action:</b> Within the “Actions” section, select the desired action to be taken when the rule is triggered. Options include sending an email notification, creating a Slack message, or triggering a custom webhook. Choose the action that best suits your alerting workflow.
+      - <b>Create and Enable Rule:</b> Once you've configured the action, click the “Create and enable rule” button to finalize and activate the alert rule. This action ensures that the rule is created and ready to detect Nmap scan events within your Elastic SIEM instance.<br/><br/>
+
+      <img src="Images/FinilizeRule.png" height="150%" width="100%" alt="Final"/><br><br/>
+
+      Once you’ve created the alert, it will monitor your logs for Nmap scan events. If an Nmap scan event is detected, the alert will be triggered and the selected action will be taken. You can view and manage your alerts on the “Alerts” section under “Security.<br/><br/>
+
+
+<h2>Conclusion</h2>
+In this comprehensive guide, we have successfully set up a home lab environment with Elastic SIEM and  Kali VM. Throughout the process, we have covered key steps such as routing data from  Kali VM to  SIEM using  Elastic Beats agent, generating security events in Kali VM using tools such as Nmap, and performing query and analysis tasks within  SIEM through Elastic web interface. Additionally, we created a customized dashboard to visualize security events and configured alarms to effectively detect security incidents.
+<br/><br/>
+This home lab is a valuable resource for learning the skills required for proficient security monitoring and incident response using Elastic SIEM. By diligently following these steps, you will gain practical experience using SIEM, improve your security monitoring skills, and pave the way for success as a qualified security analyst or engineer. Keep exploring, practicing and honing your skills to stay at the forefront of cybersecurity.
 
 
 
