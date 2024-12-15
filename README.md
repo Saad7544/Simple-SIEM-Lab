@@ -81,7 +81,9 @@
 
        Once the installation process is complete, which may take a few minutes, you'll receive a confirmation message stating "Elastic Agent has been successfully installed." The agent will automatically start collecting and forwarding logs to your Elastic SIEM instance. However, it might take a few minutes for the logs to appear in the SIEM.
 
-       To verify that the agent has been installed correctly, run the following command in your Kali terminal: <b>sudo systemctl status elastic-agent.service</b>
+       To verify that the agent has been installed correctly, run the following command in your Kali terminal:
+
+           sudo systemctl status elastic-agent.service
 
        <br/>
        <img src="Images/ServiceStarted.png" height="150%" width="100%" alt="Elastic Defend"/><br><br/>
@@ -95,6 +97,7 @@
        - <b>(Optional) Install Nmap:</b> If you're not using Kali Linux (where Nmap comes preinstalled), you'll need to install it on your Linux VM. Open a new Terminal and execute the following command to install Nmap:
 
              sudo apt install nmap
+         
       <br/>
          <b>Run the Scan:</b> With Nmap installed, initiate a scan on your Kali machine. Execute this command in the Terminal:<br/><br/>
 
