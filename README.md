@@ -59,6 +59,106 @@
 
       <p align="center">
       <img src="Images/AddingIntegrations.png" height="50%" width="25%" alt="Adding Integrations"/>
-      </p>
-Search for "Elastic Defend" and click on it to open the integration page.
+      </p><br/><br/>
+
+     - Search for "Elastic Defend" and click on it to open the integration page.
+
+       <img src="Images/ElasticDefend.png" height="150%" width="100%" alt="Elastic Defend"/>
+
+     - Then add the "Elastic Defend" Integration.
+
+       <img src="Images/AddingElasticDefend.png" height="150%" width="100%" alt="Adding Elastic Defend"/><br/><br/><br/>
+
+       <img src="Images/InstallingAgent.png" height="150%" width="100%" alt="Installing Agent"/>
+
+     - Next, click on "Install Elastic Defend" and carefully follow the instructions provided on the integration page to install the agent on your Kali VM. Make sure to select "Linux" and copy the provided command to your clipboard.
+
+       <img src="Images/AgentSetup.png" height="150%" width="100%" alt="Agent Setup"/><br><br/>
+
+     - Paste the copied command into the terminal of your Kali VM. 
+
+       <img src="Images/VirtualBox_Kali Linux_Agent.png" height="150%" width="100%" alt="Agent Added"/><br><br/>
+
+       Once the installation process is complete, which may take a few minutes, you'll receive a confirmation message stating "Elastic Agent has been successfully installed." The agent will automatically start collecting and forwarding logs to your Elastic SIEM instance. However, it might take a few minutes for the logs to appear in the SIEM.
+
+       To verify that the agent has been installed correctly, run the following command in your Kali terminal: 
+
+       ```console
+       sudo systemctl status elastic-agent.service
+       ```
+       <br/>
+       <img src="Images/ServiceStarted.png" height="150%" width="100%" alt="Elastic Defend"/><br><br/>
+
+       If you get any error installing the agent, make sure that your Kali is connected to the internet before proceeding by pinging google.com
+
+        <img src="Images/pingGoogle.png" height="150%" width="100%" alt="Pinging Google"/><br/><br/>
+
+       - Let's create a few security-related events on your Kali virtual machine to make sure the agent is operating correctly. We'll make use of a potent tool called Nmap for this. Network Mapper, or Nmap for short, is a priceless open-source tool that is well-known for network administration, security audits, and exploration. It is designed to efficiently map out a computer network's infrastructure by exposing hosts and services. Nmap is excellent at determining operating systems and software versions, searching hosts for open ports, and obtaining thorough network knowledge. Follow these simple steps to conduct an Nmap scan:
+
+       - <b>(Optional) Install Nmap:</b> If you're not using Kali Linux (where Nmap comes preinstalled), you'll need to install it on your Linux VM. Open a new Terminal and execute the following command to install Nmap:
+
+            ```console
+             sudo apt install nmap
+            ```
+       - <b>Run the Scan:</b> With Nmap installed, initiate a scan on your Kali machine. Execute the command below in the Terminal:
+            ```console
+             nmap -sC -sV -p- localhost
+            ```
+       <img src="Images/NmapScan.png" height="150%" width="100%" alt="Nmap Scan"/><br><br/>
+
+       - Run a few more Nmap scans (“nmap -sS ”, “nmap -sT ”, “nmap -p- ” etc. :
+
+       <img src="Images/MoreNmapScans.png" height="150%" width="100%" alt="More Scans"/><br><br/>
+<br/>
+
+3. <b>Searching the Elastic SIEM for Security Events:</b> It's time to start searching and examining the logs in the SIEM interface now that the data has been smoothly transferred from the Kali virtual machine to our SIEM. To help you get started, here is a basic guide:
+     - To access your Elastic Deployment, navigate to it, find the menu icon (usually shown by three horizontal lines) in the top-left corner, click on it, and then choose the "Logs" option under the "Observability" section. This will allow you to view the logs coming from your Kali virtual machine.<br/><br/>
+
+<p align="center">
+      <img src="Images/LogsButton.png" height="50%" width="25%" alt="Adding Integrations"/>
+      </p><br/>
+      
+- <b>Type a search query:</b> Apply your criteria to the logs by using the search bar. To isolate logs related to Nmap scans, for example, enter the following query: "nmap_scan" for event.action or "sudo" for process.args.
+
+- <b>Execute the Search:</b> After entering your search query, click the "Search" button to initiate the query execution. Please be aware that the events may take some time to load and appear on the SIEM interface. Don't be concerned if the results don't instantly reflect your inquiry.
+
+- <b>Review the Search Results:</b> The results of your search query will be displayed in an organized table below. Individual events can be explored further by clicking on the extend like icon (beside the checkbox), which will provide you with extra information.<br/><br/>
+
+      <img src="Images/Query.png" height="150%" width="100%" alt="Query"/><br/><br/>
+
+- You can improve your understanding of how security incidents are identified, investigated, and addressed in real-world environments by creating and analysing various types of security events within Elastic SIEM, such as those described above, or simulating authentication failures by entering incorrect passwords for user accounts or attempting SSH logins with invalid credentials.<br/>
+<br/>
+
+4. <b>Visualize the Events through the Dashboard:</b> Use the SIEM app's visualisations and dashboards to go further into log analysis and identify trends or anomalies in your data. Creating a customised dashboard allows you to easily track the number of security events over time, providing vital insights into your network's security posture.
+Follow these steps to craft your dashboard:
+
+      <b>Access the Elastic Web Portal:</b> Open your web browser and navigate to the Elastic web portal at https://cloud.elastic.co/
+      - Navigate to Dashboards: Once logged in, locate the menu icon positioned at the top-left corner of the interface. 
+      - Click on it, and then under the "Analytics" section, select "Dashboards"
+
+<br/>
+<br/>
+
+<p align="center">
+      <img src="Images/DashboardButton.png" height="50%" width="25%" alt="Dashboard Option"/>
+      </p><br/>
+
+- <b>Create a New Dashboard:</b> Once you're in the Dashboards section, locate and click on the “Create dashboard” button positioned on the top right corner. This action initiates the process of creating a new dashboard where you can compile your visualizations.
+- <b>Add a New Visualization:</b> Within your newly created dashboard, click on the “Create Visualization” button to commence the addition of a new visualization component.
+- <b>Choose Visualization Type:</b> Upon clicking the "Create Visualization" button, you'll be prompted to select the type of visualization you wish to incorporate. Depending on your preference and the nature of your data, opt for "Bar" visualization type. These options enable you to generate a chart illustrating the count of events over time, offering a dynamic representation of your security event data.
+- <b>Configure Metrics:</b> Within the visualization editor located on the right-hand side, navigate to the “Metrics” section. Here, select “Count” as the vertical field type. This choice allows you to visualize the count of events over time effectively. For the horizontal field, opt for “Timestamp”.
+- <b>Save Your Visualization:</b> Once you've configured the metrics and customized your visualization to your liking, click on the “Save and return” button. This action ensures that your visualization is saved within the dashboard, allowing you to revisit and further refine it as needed.<br/><br/>
+
+      <img src="Images/Dashboard.png" height="150%" width="100%" alt="Dashboard"/><br><br/>
+
+
+
+
+
+
+
+
+
+
+
       
