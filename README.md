@@ -99,9 +99,9 @@
       <br/>
        <img src="Images/NmapScan.png" height="150%" width="100%" alt="Nmap Scan"/><br><br/>
 
-       - Run a few more Nmap scans (“nmap -sS ”, “nmap -sT ”, “nmap -p- ” etc. :
+   - Run a few more Nmap scans (“nmap -sS ”, “nmap -sT ”, “nmap -p- ” etc. :
 
-       <img src="Images/MoreNmapScans.png" height="150%" width="100%" alt="More Scans"/><br><br/>
+   <img src="Images/MoreNmapScans.png" height="150%" width="100%" alt="More Scans"/><br><br/>
 <br/>
 
 3. <b>Searching the Elastic SIEM for Security Events:</b> It's time to start searching and examining the logs in the SIEM interface now that the data has been smoothly transferred from the Kali virtual machine to our SIEM. To help you get started, here is a basic guide:
@@ -117,7 +117,7 @@
 
 - <b>Review the Search Results:</b> The results of your search query will be displayed in an organized table below. Individual events can be explored further by clicking on the extend like icon (beside the checkbox), which will provide you with extra information.<br/><br/>
 
-      <img src="Images/Query.png" height="150%" width="100%" alt="Query"/><br/><br/>
+  <img src="Images/Query.png" height="150%" width="100%" alt="Query"/><br/><br/>
 
 - You can improve your understanding of how security incidents are identified, investigated, and addressed in real-world environments by creating and analysing various types of security events within Elastic SIEM, such as those described above, or simulating authentication failures by entering incorrect passwords for user accounts or attempting SSH logins with invalid credentials.<br/>
 <br/>
@@ -142,7 +142,7 @@ Follow these steps to craft your dashboard:
 - <b>Configure Metrics:</b> Within the visualization editor located on the right-hand side, navigate to the “Metrics” section. Here, select “Count” as the vertical field type. This choice allows you to visualize the count of events over time effectively. For the horizontal field, opt for “Timestamp”.
 - <b>Save Your Visualization:</b> Once you've configured the metrics and customized your visualization to your liking, click on the “Save and return” button. This action ensures that your visualization is saved within the dashboard, allowing you to revisit and further refine it as needed.<br/><br/>
 
-      <img src="Images/Dashboard.png" height="150%" width="100%" alt="Dashboard"/><br><br/>
+  <img src="Images/Dashboard.png" height="150%" width="100%" alt="Dashboard"/><br><br/>
 
 
 
