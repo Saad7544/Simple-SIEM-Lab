@@ -39,7 +39,7 @@
       Click on the “Create Deployment” button and select “Elasticsearch” as the deployment type. Choose a region and deployment size according to your needs and click on the “Create Deployment”.
       Wait for the configuration to complete. Once the deployment is ready, click “Continue”.
 
-      - <b>Free Elastic account setup and creating Deployment: </b>
+      - <b>Free Elastic account setup and created Deployment: </b>
 
         <img src="Images/FreeAccountCreated.png" height="150%" width="100%" alt="Account Created"/>
             
