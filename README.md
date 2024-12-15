@@ -33,9 +33,9 @@
 
 <h2>Implementation</h2>
 
-1. <b>Set up a free Elastic account and Install the Kali VM:</b>
+1. <b>Setting up a free Elastic account and Install the Kali VM:</b>
 
-      - <b>Set up a free Elastic account: </b>Use Elastic Cloud registration link from above to sign up for a free trial account. Then log in to the Elastic Cloud console, click on the “Start your free trial”.
+      - <b>Free Trial Elastic account: </b>Use Elastic Cloud registration link from above to sign up for a free trial account. Then log in to the Elastic Cloud console, click on the “Start your free trial”.
       Click on the “Create Deployment” button and select “Elasticsearch” as the deployment type. Choose a region and deployment size according to your needs and click on the “Create Deployment”.
       Wait for the configuration to complete. Once the deployment is ready, click “Continue”.
 
@@ -51,4 +51,12 @@
         <img src="Images/VirtualBox_Kali Linux.png" height="150%" width="100%" alt="Kali VM"/>
             <br />
             <br />
+</br>
+
+2. <b>Setting up the Agent to Collect Logs:</b> We must set up an agent to efficiently monitor security events on your Kali virtual machine and make sure they are transmitted to your Elastic SIEM instance. When it comes to gathering and sending data from devices to a centralised system for monitoring and analysis, agents are essential. To configure the agent to gather logs from your Kali virtual machine and send them to your Elastic SIEM instance, follow these steps:
+      - Go to the Integrations page after logging into your Elastic SIEM instance. 
+      - This can be accomplished by selecting "Integrations" at the bottom after clicking on the Kibana main menu bar in the upper left corner. 
+
+      <img src="Images/AddingIntegrations.png" height="50%" width="25%" alt="Adding Integrations"/>
+
       
