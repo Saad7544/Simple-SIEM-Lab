@@ -57,6 +57,8 @@
       - Go to the Integrations page after logging into your Elastic SIEM instance. 
       - This can be accomplished by selecting "Integrations" at the bottom after clicking on the Kibana main menu bar in the upper left corner. 
 
+      <p align="center">
       <img src="Images/AddingIntegrations.png" height="50%" width="25%" alt="Adding Integrations"/>
-
+      </p>
+Search for "Elastic Defend" and click on it to open the integration page.
       
